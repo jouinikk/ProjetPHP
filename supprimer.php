@@ -8,7 +8,7 @@ catch (Exception $e)
 {
 die('Erreur : ' . $e->getMessage());
 }
-$sqlQuery = "DELETE FROM animaux WHERE nom = $id";
+$sqlQuery = "DELETE FROM animaux WHERE nom = '$id'";
 $requete = $db->prepare($sqlQuery);
 $requete->execute();
 header('location:affich.php');
